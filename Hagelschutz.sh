@@ -5,6 +5,8 @@ do
 
 curstate2=$curstate
 
+#MAC_ADDRESS: Your Loxone MS MAC MAC_ADDRESS
+#ID: Your "Schnittstellen" ID given by the vkg
 url=https://meteo.netitservices.com/api/v0/devices/MAC_ADDRESS/poll?hwtypeId=ID
 
 curstate=$(curl -sb -H "Accept: application/json" ${url} | cut -c 2-17)
